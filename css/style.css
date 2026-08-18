@@ -110,55 +110,88 @@ h2 span {
   border: 1px solid var(--color-brand);
 }
 
-/* Link*/
+.arrow {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.arrow-icon {
+  --color0: var(--color-primary-light); /* фон кола — білий */
+  --color1: var(--color-primary-dark); /* обводка + стрілка — темні */
+}
+
+.arrow:hover .arrow-icon {
+  --color0: var(--color-brand); /* фон кола стає синім */
+  --color1: var(--color-primary-light); /* стрілка стає білою */
+}
+/*link*/
 
 .link {
   color: var(--color-primary-dark);
   text-decoration: none;
+  font-size: 18px;
+  line-height: 100%;
 }
 
 .link:hover {
   color: var(--color-brand);
+  font-weight: 700;
 }
 /* Header */
 
-.header {
-  background-color: brown;
+.header-section {
+  background-color: var(--color-primary-light);
 }
 
 .header-container {
   display: flex;
   align-items: center;
-  gap: 242px;
+  justify-content: space-between;
+  padding: 24px 0;
 }
 
 .header-nav {
+  color: var(--color-primary-dark);
   display: flex;
   align-items: center;
-  flex-grow: 1;
   gap: 240px;
 }
 
 .header-menu {
-  font-family: 'Roboto', sans-serif;
-  font-weight: 700;
-  size: 18px;
-  line-height: 100%;
   display: flex;
-  flex-grow: 1;
-  justify-content: center;
-  gap: 56px;
+  gap: 44px;
 }
 
 .header-social {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-icon {
+  --color0: var(--color-primary-dark);
 }
 
 /* Hero */
+
+.hero-section {
+  padding: 16.5px 0 63px 0;
+  background-image: url('../image/Facial-Massage.jpg');
+  background-repeat: no-repeat;
+  background-position: center top;
+  background-size: cover;
+}
 
 .hero-conteiner {
   display: flex;
 }
 .hero-text-conteiner {
+  margin-left: 244px;
   display: inline-block;
 }
 
@@ -177,36 +210,17 @@ h2 span {
 }
 
 .hero-subtitle {
+  max-width: 260px;
+  text-align: center;
   color: #4a4a4a;
   line-height: 18px;
 }
 
-/* Section */
-
-.hero-section {
-  padding: 16.5px 0 63px 0;
-}
+/* About */
 
 .about-section {
   padding: 63px 0 88px 0;
 }
-
-.why-us-section {
-  padding: 88px 0 48px 0;
-}
-
-.services-section {
-  padding: 48px 0 48px 0;
-}
-
-.contact-section {
-  padding: 48px 0 47.5px 0;
-}
-
-.footer-section {
-  padding: 47.5px 0 0 0;
-}
-/* About */
 
 .about-conteiner {
   display: flex;
@@ -216,12 +230,6 @@ h2 span {
 
 .about-text-conteiner {
   max-width: 709px;
-}
-
-.about-image-conteiner {
-}
-
-.about-image {
 }
 
 .about-title {
@@ -234,6 +242,7 @@ h2 span {
 }
 
 .about-description {
+  max-width: 653px;
   margin-bottom: 40px;
   color: var(--color-primary-dark);
   font-size: 22px;
@@ -247,7 +256,7 @@ h2 span {
 }
 
 .about-text.limited {
-  max-width: 355px;
+  max-width: 567px;
 }
 
 .about-text strong {
@@ -258,13 +267,19 @@ h2 span {
 
 /* Why Us */
 
+.why-us-section {
+  padding: 88px 0 48px 0;
+}
+
 .why-us-title {
+  max-width: 441px;
+  margin: 0 auto;
   color: var(--color-primary-dark);
   text-align: center;
   margin-bottom: 48px;
   font-family: 'Play', sans-serif;
   font-weight: 700;
-  font-size: 68px;
+  font-size: 64px;
   line-height: 100%;
 }
 
@@ -275,6 +290,8 @@ h2 span {
 }
 
 .why-us-article {
+  width: 316px;
+  height: 181px;
   padding: 24px 32px;
   flex: 1;
   border: 2px solid #a8c6ff;
@@ -289,6 +306,10 @@ h2 span {
 }
 
 /* Services */
+
+.services-section {
+  padding: 48px 0 48px 0;
+}
 
 .services-title {
   color: var(--color-primary-dark);
@@ -318,21 +339,22 @@ h2 span {
   gap: 24px;
 }
 
-.service-image {
-  margin-bottom: 24px;
-  width: 100%;
-  height: 456px;
-  margin: 0 auto;
+.servise-card {
 }
 
 .service-description {
   color: var(--color-primary-light);
-  padding: 0 77px 0 115px;
+  text-align: center;
+  padding: 0 20px;
   font-size: 22px;
   line-height: 26px;
 }
 
 /* Contact */
+
+.contact-section {
+  padding: 48px 0 47.5px 0;
+}
 
 .contact-title {
   color: var(--color-primary-dark);
@@ -344,29 +366,43 @@ h2 span {
   line-height: 100%;
 }
 
+.contact-conteiner {
+  display: flex;
+  gap: 32px;
+}
+
+.form-conteiner {
+  background-color: var(--color-primary-dark);
+  border-radius: 32px;
+  padding: 40px;
+  max-width: 423px;
+}
+
+.form-section {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
 .form-title {
+  color: var(--color-primary-light);
   font-family: 'Play';
+  text-align: center;
+  margin-bottom: 32px;
   font-weight: 600;
   font-size: 22px;
   line-height: 100%;
+  padding: 0 75px;
 }
 
 .form-section p span {
   color: var(--color-brand);
-  font-size: 22px;
-  line-height: 100%;
 }
 
 .form-section label {
   color: var(--color-primary-light);
   font-size: 13px;
   line-height: 100%;
-}
-
-.consent-text {
-  color: var(--color-secondary-neutral);
-  font-size: 12px;
-  line-height: 1.5;
 }
 
 .form-label {
@@ -383,16 +419,80 @@ h2 span {
   border: 2px solid var(--color-secondary-neutral);
 }
 
+.content-text {
+  width: 272px;
+  color: var(--color-secondary-neutral);
+  text-align: center;
+  margin: 0 auto;
+}
 /* Footer */
 
-footer a {
+.footer-section {
+  padding: 47.5px 0;
+  position: relative;
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-conteiner {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+
+.footer-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 186px;
+  margin-right: 180px;
+}
+
+.footer-menu {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-address {
+  display: flex;
+  font-style: normal;
+  align-items: flex-start; /* якщо контакти праворуч, вирівняні по правому краю */
+  gap: 186px;
+}
+.footer-contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.link-footer {
   color: var(--color-primary-light);
   text-decoration: none;
   font-size: 16px;
   line-height: 100%;
 }
 
-footer p {
+.footer-address-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-address-info {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.footer-copyright {
   color: var(--color-secondary-neutral);
   font-size: 13px;
   line-height: 100%;

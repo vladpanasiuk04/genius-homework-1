@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <header class="header">
+    <header class="header-section">
       <div class="conteiner">
         <div class="header-container">
           <nav class="header-nav">
@@ -24,22 +24,26 @@
             </ul>
           </nav>
           <ul class="header-social">
-            <li><a href="tel:+380970000007">іконка дзвінок</a></li>
             <li>
-              <a
-                href="https://www.facebook.com/beautyzone"
-                target="_blank"
-                rel="noopener noreferrer"
-                >іконка фейсбук</a
-              >
+              <a href="tel:+380960000007">
+                <svg class="header-icon" width="32" height="32">
+                  <use href="./image/icons.svg#telephone"></use>
+                </svg>
+              </a>
             </li>
             <li>
-              <a
-                href="https://www.instagram.com/beautyzone"
-                target="_blank"
-                rel="noopener noreferrer"
-                >іконка інстаграм</a
-              >
+              <a href="#">
+                <svg class="header-icon" width="32" height="32">
+                  <use href="./image/icons.svg#facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <svg class="header-icon" width="32" height="32">
+                  <use href="./image/icons.svg#instagram"></use>
+                </svg>
+              </a>
             </li>
           </ul>
         </div>
@@ -57,10 +61,6 @@
                 Запишись та отримай безкоштовну консультацію нашого косметолога
               </p>
             </div>
-            <img
-              src="./image/hero-photo.jpg"
-              alt="Косметолог виконує процедуру догляду за обличчям"
-            />
           </div>
         </div>
       </section>
@@ -82,13 +82,9 @@
                 нами краса назавжди!
               </p>
             </div>
-            <div class="about-image-conteiner">
-              <img src="./image/Mask-group2.jpg" alt="Жінка до процедури " />
-              <img
-                class="about-image"
-                src="./image/Mask-group2.jpg"
-                alt="Жінка після процедури "
-              />
+            <div class="about-image">
+              <img src="./image/Mask-before.jpg" />
+              <img src="./image/Mask-after.jpg" />
             </div>
           </div>
         </div>
@@ -128,43 +124,32 @@
         <div class="conteiner">
           <h2 class="services-title">Наші <span>процедури</span></h2>
           <div class="service-slider">
-            <button>
-              <img src="./image/Left-arrow.svg" alt="Попередній слайд" />
+            <button class="arrow" type="button">
+              <svg class="arrow-icon" width="44" height="44">
+                <use href="image/icons.svg#Arrow2"></use>
+              </svg>
             </button>
             <ul class="service-list">
               <li>
-                <article>
-                  <img
-                    class="service-image"
-                    src="./image/Facial-Masks.jpg"
-                    alt="Маска для обличчя"
-                  />
-                  <p class="service-description">Маска для обличчя</p>
+                <article class="servise-card">
+                  <h3 class="service-description">Маска для обличчя</h3>
                 </article>
               </li>
               <li>
-                <article>
-                  <img
-                    class="service-image"
-                    src="./image/Facial-Injections.jpg"
-                    alt="Ін'єкції для обличчя"
-                  />
-                  <p class="service-description">Ін'єкції для обличчя</p>
+                <article class="servise-card">
+                  <h3 class="service-description">Ін'єкції для обличчя</h3>
                 </article>
               </li>
               <li>
-                <article>
-                  <img
-                    class="service-image"
-                    src="./image/Facial-Cleansing.jpg"
-                    alt="Очищення обличчя"
-                  />
-                  <p class="service-description">Очищення обличчя</p>
+                <article class="servise-card">
+                  <h3 class="service-description">Очищення обличчя</h3>
                 </article>
               </li>
             </ul>
-            <button>
-              <img src="./image/Right-arrow.svg" alt="Наступний слайд" />
+            <button class="arrow" type="button">
+              <svg class="arrow-icon" width="44" height="44">
+                <use href="./image/icons.svg#Arrow2"></use>
+              </svg>
             </button>
           </div>
         </div>
@@ -172,101 +157,134 @@
       <section class="contact-section" id="contact">
         <div class="conteiner">
           <h2 class="contact-title">Як <span>знайти</span> нас</h2>
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5081.880125837256!2d30.51555397643694!3d50.442217071590605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2sde!4v1784126427452!5m2!1sru!2sde"
-            width="605"
-            height="481"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="strict-origin-when-cross-origin"
-            title="Карта розташування Beauty Zone"
-          ></iframe>
-          <form class="form-section">
-            <p class="form-title">
-              Запишіться <span>безкоштовно</span> та отримайте подарунок
-            </p>
-            <label for="name">Ваше ім'я та прізвище</label>
-            <input
-              class="form-label"
-              type="text"
-              id="name"
-              name="name"
-              required
-            />
-
-            <label for="phone">Ваш номер телефону</label>
-            <input
-              class="form-label"
-              type="tel"
-              id="phone"
-              name="phone"
-              required
-            />
-
-            <label for="email">Ваша електронна пошта</label>
-            <input
-              class="form-label"
-              type="email"
-              id="email"
-              name="email"
-              required
-            />
-
-            <button class="button-two" type="submit">
-              Записатися безкоштовно
-            </button>
-            <p class="consent-text">
-              Натискаючи на кнопку, я погоджуюсь
-              <a href="#" class="consent-link">з політикою конфіденційності</a>
-            </p>
-          </form>
+          <div class="contact-conteiner">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d5081.880125837256!2d30.51555397643694!3d50.442217071590605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40d4cef8b5f6338d%3A0x25c7f06ad686451c!2z0LHRg9C7LiDQotCw0YDQsNGB0LAg0KjQtdCy0YfQtdC90LrQviwgNSwg0JrQuNC10LIsINCj0LrRgNCw0LjQvdCwLCAwMjAwMA!5e0!3m2!1sru!2sde!4v1784126427452!5m2!1sru!2sde"
+              width="605"
+              height="481"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="strict-origin-when-cross-origin"
+              title="Карта розташування Beauty Zone"
+            ></iframe>
+            <div class="form-conteiner">
+              <form class="form-section">
+                <p class="form-title">
+                  Запишіться <span>безкоштовно</span> та отримайте подарунок
+                </p>
+                <div class="form-field">
+                  <label for="name">Ваше ім'я та прізвище</label>
+                  <input
+                    class="form-label"
+                    type="text"
+                    id="name"
+                    name="name"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="phone">Ваш номер телефону</label>
+                  <input
+                    class="form-label"
+                    type="tel"
+                    id="phone"
+                    name="phone"
+                    required
+                  />
+                </div>
+                <div class="form-field">
+                  <label for="email">Ваша електронна пошта</label>
+                  <input
+                    class="form-label"
+                    type="email"
+                    id="email"
+                    name="email"
+                    required
+                  />
+                </div>
+                <button class="button-two" type="submit">
+                  Записатися безкоштовно
+                </button>
+                <p class="content-text">
+                  Натискаючи на кнопку, я погоджуюсь
+                  <a href="#" class="consent-link"
+                    >з політикою конфіденційності</a
+                  >
+                </p>
+              </form>
+            </div>
+          </div>
         </div>
       </section>
     </main>
     <footer class="footer-section">
       <div class="conteiner">
-        <a href="#"> <img src="./image/logo.svg" alt="Beauty Zone Logo" /></a>
-        <nav>
-          <ul>
-            <li>
-              <a href="#about">Про нас</a>
-            </li>
-            <li><a href="#why-us">Чому ми</a></li>
-            <li><a href="#services">Наші процедури</a></li>
-            <li><a href="#contact">Контакти</a></li>
-          </ul>
-        </nav>
-        <address>
-          <ul>
-            <li><a href="tel:+380960000007">+ 38 (096) 000 00 07</a></li>
-            <li>
-              <a href="mailto:beautyzone@gmail.com">beautyzone@gmail.com</a>
-            </li>
-            <li>
-              <a
-                href="https://maps.app.goo.gl/HnCB11w3N8Eyhjzk7"
-                target="_blank"
-                rel="noopener noreferrer"
-                >Україна, м. Київ, вул. Тараса Шевченка 5</a
-              >
-            </li>
-          </ul>
-          <ul>
-            <li>
-              <a href="tel:+380960000007">іконка дзвінок</a>
-            </li>
-            <li>
-              <a href="#"><!-- Facebook icon --></a>
-            </li>
-            <li>
-              <a href="#"><!-- Instagram icon --></a>
-            </li>
-          </ul>
-
-          <a href="#">Політика конфіденційності</a>
-          <p>&copy; 2022 Дані захищені</p>
-          <img src="./image/Produckt-photos.jpg" alt="Флакони з рідиною" />
-        </address>
+        <div class="footer-conteiner">
+          <nav class="footer-nav">
+            <div class="footer-logo">
+              <a href="#">
+                <img src="./image/logo.svg" alt="Beauty Zone Logo" />
+              </a>
+            </div>
+            <ul class="footer-menu">
+              <li>
+                <a class="link-footer" href="#about">Про нас</a>
+              </li>
+              <li><a class="link-footer" href="#why-us">Чому ми</a></li>
+              <li>
+                <a class="link-footer" href="#services">Наші процедури</a>
+              </li>
+              <li><a class="link-footer" href="#contact">Контакти</a></li>
+            </ul>
+          </nav>
+          <address class="footer-address">
+            <div class="footer-contacts">
+              <ul class="footer-address-list">
+                <li>
+                  <a class="link-footer" href="tel:+380960000007"
+                    >+ 38 (096) 000 00 07</a
+                  >
+                </li>
+                <li>
+                  <a class="link-footer" href="mailto:beautyzone@gmail.com"
+                    >beautyzone@gmail.com</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="link-footer"
+                    href="https://maps.app.goo.gl/HnCB11w3N8Eyhjzk7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Україна, м. Київ,<br />
+                    вул. Тараса Шевченка 5</a
+                  >
+                </li>
+              </ul>
+              <div class="footer-socials">
+                <a href="tel:+380960000007">
+                  <svg class="footer-icon" width="42" height="42">
+                    <use href="./image/icons.svg#telephone"></use>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg class="footer-icon" width="42" height="42">
+                    <use href="./image/icons.svg#facebook"></use>
+                  </svg>
+                </a>
+                <a href="#">
+                  <svg class="footer-icon" width="42" height="42">
+                    <use href="./image/icons.svg#instagram"></use>
+                  </svg>
+                </a>
+              </div>
+            </div>
+            <div class="footer-address-info">
+              <a class="link-footer" href="#">Політика конфіденційності</a>
+              <p class="footer-copyright">&copy; 2022 Дані захищені</p>
+            </div>
+          </address>
+        </div>
       </div>
     </footer>
   </body>
