@@ -47,16 +47,20 @@
 }
 
 /* Base */
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
-  margin-top: 0;
-  margin-bottom: 0;
 }
 body {
   color: var(--color-primary-dark);
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
   margin: 0px;
+}
+
+a {
+  display: inline-block;
 }
 
 ul {
@@ -219,7 +223,7 @@ h2 span {
 /* About */
 
 .about-section {
-  padding: 63px 0 88px 0;
+  padding: 63px 0 176px 0;
 }
 
 .about-conteiner {
@@ -265,6 +269,33 @@ h2 span {
   line-height: 38px;
 }
 
+.about-image {
+  position: relative;
+  width: 335px;
+  height: 328px;
+  flex-shrink: 0;
+}
+
+.about-image img {
+  position: absolute;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.about-image img:first-child {
+  top: 20px;
+  left: -150px;
+  width: 335px;
+  height: 328px;
+}
+
+.about-image img:last-child {
+  width: 343px;
+  height: 328px;
+  top: 351px;
+  left: 80px;
+}
+
 /* Why Us */
 
 .why-us-section {
@@ -293,7 +324,6 @@ h2 span {
   width: 316px;
   height: 181px;
   padding: 24px 32px;
-  flex: 1;
   border: 2px solid #a8c6ff;
   border-radius: 32px;
   text-align: center;
@@ -302,7 +332,8 @@ h2 span {
 .why-us-text {
   color: var(--color-secondary-dark);
   font-size: 18px;
-  line-height: 1.3;
+  line-height: 24px;
+  margin: 0;
 }
 
 /* Services */
@@ -340,14 +371,48 @@ h2 span {
 }
 
 .servise-card {
+  position: relative;
+  border-radius: 4px 120px 4px 120px;
+  overflow: hidden;
+}
+
+.servise-photo {
+  width: 100%;
+  height: 460px;
+  object-fit: cover;
+  display: block;
 }
 
 .service-description {
-  color: var(--color-primary-light);
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  right: 0;
   text-align: center;
-  padding: 0 20px;
+  color: var(--color-primary-light);
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
   font-size: 22px;
   line-height: 26px;
+  letter-spacing: 0;
+  z-index: 2;
+}
+
+.servise-card::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  background: linear-gradient(
+    to top,
+    rgba(1, 28, 68, 1) 0%,
+    rgba(1, 28, 68, 0.7) 30%,
+    rgba(1, 28, 68, 0) 72.58%
+  );
+  z-index: 1;
+  border-radius: inherit;
 }
 
 /* Contact */
@@ -386,7 +451,7 @@ h2 span {
 
 .form-title {
   color: var(--color-primary-light);
-  font-family: 'Play';
+  font-family: 'Roboto';
   text-align: center;
   margin-bottom: 32px;
   font-weight: 600;
@@ -428,7 +493,7 @@ h2 span {
 /* Footer */
 
 .footer-section {
-  padding: 47.5px 0;
+  padding: 56px 0;
   position: relative;
   background-color: var(--color-primary-dark);
   background-repeat: no-repeat;
@@ -438,34 +503,25 @@ h2 span {
 
 .footer-conteiner {
   display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
+  gap: 20px;
 }
 
-.footer-nav {
-  display: flex;
-  flex-direction: row;
-  align-items: flex-start;
-  gap: 186px;
-  margin-right: 180px;
-}
-
-.footer-menu {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
-}
-
+.footer-nav,
 .footer-address {
   display: flex;
+  flex-basis: 50%;
   font-style: normal;
-  align-items: flex-start; /* якщо контакти праворуч, вирівняні по правому краю */
-  gap: 186px;
+  gap: 20px;
 }
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-address-info,
 .footer-contacts {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
+  flex-grow: 1;
 }
 
 .link-footer {
@@ -473,23 +529,17 @@ h2 span {
   text-decoration: none;
   font-size: 16px;
   line-height: 100%;
+  margin-bottom: 16px;
 }
 
 .footer-address-list {
   display: flex;
   flex-direction: column;
-  gap: 16px;
 }
 
 .footer-socials {
   display: flex;
   gap: 24px;
-}
-
-.footer-address-info {
-  display: flex;
-  flex-direction: column;
-  gap: 16px;
 }
 
 .footer-copyright {
