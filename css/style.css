@@ -96,22 +96,10 @@ h2 span {
   border-radius: 32px;
 }
 
-.button-two {
-  color: var(--color-primary-light);
-  margin-bottom: 8px;
-  padding: 16px 32px;
-  font-weight: 600;
-  font-size: 18px;
-  background-color: var(--color-brand);
-  border: 2px solid var(--color-brand);
-  cursor: pointer;
-  border-radius: 32px;
-}
-
 .button:hover {
   color: var(--color-secondary-dark);
   background-color: transparent;
-  border: 1px solid var(--color-brand);
+  border: 2px solid var(--color-brand);
 }
 
 .arrow {
@@ -214,6 +202,7 @@ h2 span {
 }
 
 .hero-subtitle {
+  margin: 0px;
   max-width: 260px;
   text-align: center;
   color: #4a4a4a;
@@ -223,7 +212,7 @@ h2 span {
 /* About */
 
 .about-section {
-  padding: 63px 0 176px 0;
+  padding: 63px 0 88px 0;
 }
 
 .about-conteiner {
@@ -271,29 +260,23 @@ h2 span {
 
 .about-image {
   position: relative;
-  width: 335px;
-  height: 328px;
-  flex-shrink: 0;
+  width: 499px;
+  height: 695px;
 }
 
 .about-image img {
-  position: absolute;
   border-radius: 50%;
   object-fit: cover;
 }
 
 .about-image img:first-child {
-  top: 20px;
-  left: -150px;
-  width: 335px;
-  height: 328px;
+  position: absolute;
 }
 
 .about-image img:last-child {
-  width: 343px;
-  height: 328px;
-  top: 351px;
-  left: 80px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
 }
 
 /* Why Us */
@@ -451,13 +434,12 @@ h2 span {
 
 .form-title {
   color: var(--color-primary-light);
-  font-family: 'Roboto';
+  font-family: 'Roboto' 'Sans-serif';
   text-align: center;
   margin-bottom: 32px;
   font-weight: 600;
   font-size: 22px;
   line-height: 100%;
-  padding: 0 75px;
 }
 
 .form-section p span {
@@ -480,8 +462,20 @@ h2 span {
 }
 
 .form-label:hover {
-  background-color: var(--color-secondary-neutral);
+  background-color: transparent;
   border: 2px solid var(--color-secondary-neutral);
+}
+
+.button-two {
+  color: var(--color-primary-light);
+  margin-bottom: 8px;
+  padding: 16px 32px;
+  font-weight: 600;
+  font-size: 18px;
+  background-color: var(--color-brand);
+  border: 2px solid var(--color-brand);
+  cursor: pointer;
+  border-radius: 32px;
 }
 
 .content-text {
@@ -546,4 +540,92 @@ h2 span {
   color: var(--color-secondary-neutral);
   font-size: 13px;
   line-height: 100%;
+}
+
+.footer-section::after {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  right: 0;
+  bottom: 0;
+  background-image: url('../image/decor-flacon.png');
+  background-repeat: no-repeat;
+  content: '';
+}
+
+/*Modal*/
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.backdrop.is-hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.modal {
+  position: relative;
+  width: 723px;
+  height: 681px;
+  background-color: var(--color-primary-dark);
+  border-radius: 48px;
+  padding: 42px 144px;
+}
+
+.modal-btn-close {
+  position: absolute;
+  top: 42px;
+  right: 42px;
+}
+
+.text-modal {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 435px;
+  margin: 0px auto;
+}
+.hero-modal {
+  color: var(--color-primary-light);
+  font-family: 'Play' 'Sans-serif';
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+  margin: 0px;
+  margin-bottom: 40px;
+}
+
+.form-title {
+  font-family: 'Roboto' 'Sans-serif';
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 100%;
+  margin-bottom: 32px;
+}
+
+.form-title span {
+  color: var(--color-brand);
+}
+
+.form-field {
+  margin-bottom: 24px;
+}
+
+.modal-label {
+  color: var(--color-primary-light);
+}
+
+.content-text {
+  margin: 0px;
 }
