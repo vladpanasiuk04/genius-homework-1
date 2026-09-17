@@ -68,13 +68,6 @@ ul {
   padding: 0;
   list-style-type: none;
 }
-h2 {
-  color: var(--color-primary-dark);
-}
-
-h2 span {
-  color: var(--color-brand);
-}
 
 .conteiner {
   width: 100%;
@@ -83,6 +76,18 @@ h2 span {
   padding: 0 24px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 /* Button */
 .button {
   color: var(--color-primary-light);
@@ -121,6 +126,11 @@ h2 span {
   --color0: var(--color-brand); /* фон кола стає синім */
   --color1: var(--color-primary-light); /* стрілка стає білою */
 }
+
+.arrow.next {
+  transform: rotate(180deg);
+}
+
 /*link*/
 
 .link {
@@ -128,6 +138,7 @@ h2 span {
   text-decoration: none;
   font-size: 18px;
   line-height: 100%;
+  transition: color 0.3s;
 }
 
 .link:hover {
@@ -137,7 +148,11 @@ h2 span {
 /* Header */
 
 .header-section {
-  background-color: var(--color-primary-light);
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
 }
 
 .header-container {
@@ -172,8 +187,16 @@ h2 span {
 /* Hero */
 
 .hero-section {
-  padding: 16.5px 0 63px 0;
-  background-image: url('../image/Facial-Massage.jpg');
+  padding: 65px 0 63px 0;
+  background-image:
+    linear-gradient(
+      89.38deg,
+      #ffffff 30.62%,
+      rgba(255, 255, 255, 0.850898) 41.31%,
+      rgba(255, 255, 255, 0.193204) 58.65%,
+      rgba(255, 255, 255, 0) 72.78%
+    ),
+    url('../image/Facial-Massage.jpg');
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
@@ -183,17 +206,18 @@ h2 span {
   display: flex;
 }
 .hero-text-conteiner {
-  margin-left: 244px;
+  margin-left: 100px;
   display: inline-block;
 }
 
 .hero-description {
-  margin-bottom: 16px;
+  padding-top: 16px;
   color: var(--color-primary-dark);
 }
 
 .hero-title {
   color: var(--color-brand);
+  margin-top: 0;
   margin-bottom: 40px;
   font-family: 'Play';
   font-weight: 700;
@@ -232,6 +256,10 @@ h2 span {
   font-weight: 700;
   font-size: 68px;
   line-height: 100%;
+}
+
+.about-title span {
+  color: var(--color-brand);
 }
 
 .about-description {
@@ -297,6 +325,10 @@ h2 span {
   line-height: 100%;
 }
 
+.why-us-title span {
+  color: var(--color-brand);
+}
+
 .why-us-image {
   display: flex;
   justify-content: center;
@@ -342,7 +374,6 @@ h2 span {
 }
 
 .service-slider {
-  position: relative; /* не знаю розбрати */
   display: flex;
   align-items: center;
   gap: 24px;
@@ -357,6 +388,11 @@ h2 span {
   position: relative;
   border-radius: 4px 120px 4px 120px;
   overflow: hidden;
+  transition: 0.3s;
+}
+
+.servise-card:hover {
+  transform: scale(1.05);
 }
 
 .servise-photo {
@@ -378,7 +414,7 @@ h2 span {
   font-size: 22px;
   line-height: 26px;
   letter-spacing: 0;
-  z-index: 2;
+  z-index: 1;
 }
 
 .servise-card::after {
@@ -394,8 +430,6 @@ h2 span {
     rgba(1, 28, 68, 0.7) 30%,
     rgba(1, 28, 68, 0) 72.58%
   );
-  z-index: 1;
-  border-radius: inherit;
 }
 
 /* Contact */
@@ -414,9 +448,14 @@ h2 span {
   line-height: 100%;
 }
 
+.contact-title span {
+  color: var(--color-brand);
+}
+
 .contact-conteiner {
   display: flex;
   gap: 32px;
+  justify-content: center;
 }
 
 .form-conteiner {
@@ -489,6 +528,7 @@ h2 span {
 .footer-section {
   padding: 56px 0;
   position: relative;
+  background-image: url('../image/footer-background.png');
   background-color: var(--color-primary-dark);
   background-repeat: no-repeat;
   background-position: center;
@@ -565,6 +605,10 @@ h2 span {
   align-items: center;
   justify-content: center;
   background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px 0;
+  transition:
+    opacity 0.3s,
+    visibility 0.3s;
 }
 
 .backdrop.is-hidden {
@@ -575,11 +619,14 @@ h2 span {
 
 .modal {
   position: relative;
-  width: 723px;
-  height: 681px;
+  width: 100%;
+  max-width: 723px;
+  height: 100%;
+  max-height: 681px;
   background-color: var(--color-primary-dark);
   border-radius: 48px;
   padding: 42px 144px;
+  overflow-y: auto;
 }
 
 .modal-btn-close {
@@ -611,7 +658,8 @@ h2 span {
   font-weight: 600;
   font-size: 22px;
   line-height: 100%;
-  margin-bottom: 32px;
+  margin-bottom: 16px;
+  margin-top: 0;
 }
 
 .form-title span {
@@ -619,13 +667,27 @@ h2 span {
 }
 
 .form-field {
+  color: var(--color-primary-light);
   margin-bottom: 24px;
 }
 
-.modal-label {
-  color: var(--color-primary-light);
+.form-laben {
+  display: block;
 }
 
-.content-text {
-  margin: 0px;
+.form-input {
+  border-radius: 32px;
+  border: 2px solid var(--color-secondary-neutral);
+  background-color: transparent;
+  padding: 18px 33px;
+  width: 100%;
+}
+
+.form-input:focus {
+  background-color: var(--color-secondary-neutral);
+  outline: none;
+}
+
+.form-input::placeholder {
+  color: var(--color-primary-light);
 }

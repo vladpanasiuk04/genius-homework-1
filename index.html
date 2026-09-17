@@ -88,6 +88,17 @@
               <img src="./image/Mask-before.jpg" />
               <img src="./image/Mask-after.jpg" />
             </div>
+            <div class="star-icon">
+              <svg width="64" height="64">
+                <use class="icon-1" href="./image/symbol-defs.svg#Star-1"></use>
+              </svg>
+              <svg width="40" height="40">
+                <use href="./image/symbol-defs.svg#Star-2"></use>
+              </svg>
+              <svg width="16" height="16">
+                <use href="./image/symbol-defs.svg#Star-3"></use>
+              </svg>
+            </div>
           </div>
         </div>
       </section>
@@ -172,7 +183,7 @@
                 </article>
               </li>
             </ul>
-            <button class="arrow" type="button">
+            <button class="arrow next" type="button">
               <svg class="arrow-icon" width="44" height="44">
                 <use href="./image/icons.svg#Arrow2"></use>
               </svg>
@@ -196,35 +207,45 @@
             <div class="form-conteiner">
               <form class="form-section">
                 <p class="form-title">
-                  Запишіться <span>безкоштовно</span> та отримайте подарунок
+                  Запишіться <span>безкоштовно</span><br />
+                  та отримайте подарунок
                 </p>
-                <div class="form-field">
-                  <label for="name">Ваше ім'я та прізвище</label>
+                <div class="form-fieldd">
+                  <label class="form-laben visually-hidden" for="name"
+                    >Ваше ім'я та прізвище</label
+                  >
                   <input
-                    class="form-label"
+                    class="form-input"
                     type="text"
                     id="name"
                     name="name"
+                    placeholder="Ваше ім'я та прізвище"
                     required
                   />
                 </div>
-                <div class="form-field">
-                  <label for="phone">Ваш номер телефону</label>
+                <div class="form-fieldd">
+                  <label class="form-laben visually-hidden" for="tel"
+                    >Ваш номер телефону</label
+                  >
                   <input
-                    class="form-label"
+                    class="form-input"
                     type="tel"
-                    id="phone"
-                    name="phone"
+                    id="tel"
+                    name="tel"
+                    placeholder="Ваш номер телефону"
                     required
                   />
                 </div>
-                <div class="form-field">
-                  <label for="email">Ваша електронна пошта</label>
+                <div class="form-fieldd">
+                  <label class="form-laben visually-hidden" for="email"
+                    >Ваша електронна пошта</label
+                  >
                   <input
-                    class="form-label"
+                    class="form-input"
                     type="email"
                     id="email"
                     name="email"
+                    placeholder="Ваша електронна пошта"
                     required
                   />
                 </div>
@@ -317,38 +338,51 @@
     <div class="backdrop is-hidden">
       <div class="modal">
         <button class="modal-btn-close" type="button">Close</button>
-        <form class="text-modal">
+        <form class="text-modal" autocomplete="off">
           <h4 class="hero-modal">Замовити дзвінок</h4>
           <p class="form-title">
-            Запишіться <span>безкоштовно</span> та отримайте подарунок
+            Запишіться <span>безкоштовно<br /></span> та отримайте подарунок
           </p>
           <div class="form-field">
-            <label class="modal-label" for="name">Ваше ім'я та прізвище</label>
+            <label class="form-laben visually-hidden" for="name"
+              >Ваше ім'я та прізвище</label
+            >
             <input
-              class="form-label"
+              class="form-input"
               type="text"
               id="name"
               name="name"
+              placeholder="Ваше ім'я та прізвище"
+              pattern="^[А-ЯІЇЄа-яіїєA-Za-z]+\s+[А-ЯІЇЄа-яіїєA-Za-z]+$"
+              title="Введіть ім'я та прізвище через пробіл (два слова)"
               required
             />
           </div>
           <div class="form-field">
-            <label class="modal-label" for="phone">Ваш номер телефону</label>
+            <label class="form-laben visually-hidden" for="tel"
+              >Ваш номер телефону</label
+            >
             <input
-              class="form-label"
+              class="form-input"
               type="tel"
-              id="phone"
-              name="phone"
+              id="tel"
+              name="tel"
+              placeholder="Ваш номер телефону"
+              pattern="^\+380\d{9}$"
+              title="Формат: +380 та 9 цифр, наприклад +380971234567"
               required
             />
           </div>
           <div class="form-field">
-            <label class="modal-label" for="email">Ваша електронна пошта</label>
+            <label class="form-laben visually-hidden" for="email"
+              >Ваша електронна пошта</label
+            >
             <input
-              class="form-label"
+              class="form-input"
               type="email"
               id="email"
               name="email"
+              placeholder="Ваша електронна пошта"
               required
             />
           </div>

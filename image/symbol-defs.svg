@@ -1,0 +1,20 @@
+<svg style="position: absolute; width: 0; height: 0; overflow: hidden;" aria-hidden="true" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <style>
+        .default-palette, .palette0 {color: currentColor;
+            --color0: #747272;
+            --color1: #2b7fff;
+            --color2: #011f4a;
+        }
+    </style>
+    <defs>
+        <symbol id="Star-3" viewBox="0 0 15 15" fill="none">
+            <path fill="var(--color0, #747272)" d="M4.2554 1e-4 8.332 4.9973l6.4063-0.7416-4.9972 4.0766 0.7416 6.4062-4.0765-4.9972L-1e-4 10.483 4.9971 6.4064z" />
+        </symbol>
+        <symbol id="Star-2" viewBox="0 0 35 35" fill="none">
+            <path fill="var(--color1, #2b7fff)" d="M27.3205 0 23.5024 15.6641 34.641 27.3205 18.9769 23.5024 7.3205 34.641l3.8181-15.6641L0 7.3205l15.6641 3.8181z" />
+        </symbol>
+        <symbol id="Star-1" viewBox="0 0 56 56" fill="none">
+            <path fill="var(--color2, #011f4a)" d="M11.7128 0 30.3631 17.8217l25.0625-6.1089-17.8217 18.6503 6.1089 25.0625-18.6503-17.8217L0 43.7128 17.8217 25.0625z" />
+        </symbol>
+    </defs>
+</svg>
