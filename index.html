@@ -107,24 +107,27 @@
           <h2 class="why-us-title">Чому люди <span>обирають нас</span></h2>
           <div class="why-us-image">
             <article class="why-us-article">
-              <img src="./image/icon-1.svg" alt="Іконка медичної освіти" />
+              <svg width="48" height="48">
+                <use href="./image/icons.svg#icon-1"></use>
+              </svg>
               <p class="why-us-text">
                 Всі наші косметологи мають вищу медичну освіту та стаж роботи
                 від 5 років
               </p>
             </article>
             <article class="why-us-article">
-              <img
-                src="./image/icon-2.svg"
-                alt="Іконка професійного обладнання"
-              />
+              <svg width="48" height="48">
+                <use href="./image/icons.svg#icon-2"></use>
+              </svg>
               <p class="why-us-text">
                 Використовуємо тільки професійне обладнання та косметику,
                 перевірену часом
               </p>
             </article>
             <article class="why-us-article">
-              <img src="./image/icon-3.svg" alt="Іконка природної краси" />
+              <svg width="48" height="48">
+                <use href="./image/icons.svg#icon-3"></use>
+              </svg>
               <p class="why-us-text">
                 Наша мета - підкреслити переваги та приховати недоліки, а не
                 переробити
@@ -139,7 +142,7 @@
           <div class="service-slider">
             <button class="arrow" type="button">
               <svg class="arrow-icon" width="44" height="44">
-                <use href="image/icons.svg#Arrow2"></use>
+                <use href="./image/icons.svg#Arrow2"></use>
               </svg>
             </button>
             <ul class="service-list">
@@ -189,6 +192,32 @@
               </svg>
             </button>
           </div>
+          <ul class="service-dots">
+            <li>
+              <button
+                class="service-dot service-dot--active"
+                aria-label="Слайд 1"
+              >
+                <svg class="ellipse-icon" width="11" height="11">
+                  <use href="./image/icons.svg#ellipse"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button class="service-dot" aria-label="Слайд 2">
+                <svg class="ellipse-icon" width="11" height="11">
+                  <use href="./image/icons.svg#ellipse"></use>
+                </svg>
+              </button>
+            </li>
+            <li>
+              <button class="service-dot" aria-label="Слайд 3">
+                <svg class="ellipse-icon" width="11" height="11">
+                  <use href="./image/icons.svg#ellipse"></use>
+                </svg>
+              </button>
+            </li>
+          </ul>
         </div>
       </section>
       <section class="contact-section" id="contact">
@@ -337,7 +366,12 @@
 
     <div class="backdrop is-hidden">
       <div class="modal">
-        <button class="modal-btn-close" type="button">Close</button>
+        <button class="modal-btn-close" type="button">
+          <svg height="32" width="32">
+            <use href="./image/icons.svg#cross"></use>
+          </svg>
+        </button>
+
         <form class="text-modal" autocomplete="off">
           <h4 class="hero-modal">Замовити дзвінок</h4>
           <p class="form-title">

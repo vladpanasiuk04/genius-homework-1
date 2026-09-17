@@ -131,6 +131,27 @@ ul {
   transform: rotate(180deg);
 }
 
+.service-dots {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+.service-dot {
+  width: 11px;
+  height: 11px;
+  border-radius: 50%;
+  border: none;
+  padding: 0;
+  background-color: var(--color-secondary-neutral);
+  cursor: pointer;
+}
+.service-dot:hover {
+  background-color: var(--color-brand);
+}
+
 /*link*/
 
 .link {
@@ -623,6 +644,10 @@ ul {
   max-width: 723px;
   height: 100%;
   max-height: 681px;
+  background-image: url('../image/background-modal.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   background-color: var(--color-primary-dark);
   border-radius: 48px;
   padding: 42px 144px;
@@ -633,6 +658,18 @@ ul {
   position: absolute;
   top: 42px;
   right: 42px;
+  background: transparent;
+  padding: 0;
+  border: none;
+  cursor: pointer;
+}
+
+.modal-btn-close svg {
+  color: var(--color-primary-light);
+}
+
+.modal-btn-close:hover svg {
+  color: var(--color-brand);
 }
 
 .text-modal {
