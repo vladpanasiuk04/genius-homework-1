@@ -1,0 +1,20 @@
+.services-section {
+  padding: 48px 0 48px 0;
+}
+
+.services-title {
+  color: var(--color-primary-dark);
+  margin-bottom: 48px;
+  font-family: 'Play', sans-serif;
+  text-align: center;
+  font-weight: 700;
+  font-size: 68px;
+  line-height: 100%;
+}
+
+.service-slider {
+  display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+  gap: 24px;
+}

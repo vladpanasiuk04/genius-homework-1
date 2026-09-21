@@ -1,0 +1,20 @@
+.fase-card {
+  position: relative;
+  width: 499px;
+  height: 695px;
+}
+
+.fase-card img {
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.fase-card img:first-child {
+  position: absolute;
+}
+
+.fase-card img:last-child {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}

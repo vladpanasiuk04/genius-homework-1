@@ -1,0 +1,32 @@
+.input {
+  position: relative;
+}
+
+.input-label {
+  display: flex;
+}
+
+.input-control {
+  border-radius: 32px;
+  border: 2px solid var(--color-secondary-neutral);
+  background-color: transparent;
+  padding: 18px 33px;
+  max-width: 310px;
+  width: 100%;
+  color: var(--color-primary-light);
+  font: inherit;
+  outline: none;
+}
+
+.input-control:focus {
+  background-color: var(--color-secondary-neutral);
+  outline: none;
+}
+
+.input-control::placeholder {
+  color: var(--color-primary-light);
+  opacity: 0.6;
+  &::placeholder {
+    color: var(--color-primary-light);
+  }
+}

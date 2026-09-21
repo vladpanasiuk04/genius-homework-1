@@ -1,0 +1,36 @@
+.header-section {
+  top: 0;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  background: rgba(255, 255, 255, 0.25);
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 24px 0;
+}
+
+.header-nav {
+  color: var(--color-primary-dark);
+  display: flex;
+  align-items: center;
+  gap: 240px;
+}
+
+.header-menu {
+  display: flex;
+  gap: 44px;
+}
+
+.header-social {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.header-icon {
+  --color0: var(--color-primary-dark);
+}

@@ -54,11 +54,4 @@
 </symbol>
     </defs>
 </svg>
-<symbol id="ellipse" viewBox="0 0 11 11" fill="none" width="32" height="32" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <style>
-        :root, .palette0 {color: currentColor;
-            --color0: #747272;
-        }
-    </style>
-    <circle fill="var(--color1, #2b7fff)" cx="5.5" cy="5.5" r="5.5" />
-</symbol>        
+        

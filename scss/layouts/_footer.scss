@@ -1,0 +1,67 @@
+.footer-section {
+  padding: 56px 0;
+  position: relative;
+  background-image: url('../image/footer-background.png');
+  background-color: var(--color-primary-dark);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.footer-conteiner {
+  display: flex;
+  gap: 20px;
+}
+
+.footer-nav,
+.footer-address {
+  display: flex;
+  flex-basis: 50%;
+  font-style: normal;
+  gap: 20px;
+}
+
+.footer-logo,
+.footer-menu {
+  flex-grow: 1;
+}
+
+.footer-address-info,
+.footer-contacts {
+  flex-grow: 1;
+}
+
+.link-footer {
+  color: var(--color-primary-light);
+  text-decoration: none;
+  font-size: 16px;
+  line-height: 100%;
+  margin-bottom: 16px;
+}
+
+.footer-address-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-socials {
+  display: flex;
+  gap: 24px;
+}
+
+.footer-copyright {
+  color: var(--color-secondary-neutral);
+  font-size: 13px;
+  line-height: 100%;
+}
+
+.footer-section::after {
+  position: absolute;
+  width: 250px;
+  height: 150px;
+  right: 0;
+  bottom: 0;
+  background-image: url('../image/decor-flacon.png');
+  background-repeat: no-repeat;
+  content: '';
+}

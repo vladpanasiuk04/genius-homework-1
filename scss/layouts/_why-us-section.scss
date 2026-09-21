@@ -1,0 +1,37 @@
+.why-us-section {
+  padding: 88px 0 48px 0;
+}
+
+.why-us-title {
+  max-width: 441px;
+  margin: 0 auto;
+  color: var(--color-primary-dark);
+  text-align: center;
+  margin-bottom: 48px;
+  font-family: 'Play', sans-serif;
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 100%;
+}
+
+.why-us-image {
+  display: flex;
+  justify-content: center;
+  gap: 56px;
+}
+
+.why-us-article {
+  width: 316px;
+  height: 181px;
+  padding: 24px 32px;
+  border: 2px solid var(--color-border-light);
+  border-radius: 32px;
+  text-align: center;
+}
+
+.why-us-text {
+  color: var(--color-secondary-dark);
+  font-size: 18px;
+  line-height: 24px;
+  margin: 0;
+}
