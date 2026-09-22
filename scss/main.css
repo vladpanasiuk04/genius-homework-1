@@ -170,33 +170,63 @@ ul {
      object-fit: cover;
 }
 
-.fase-card img:first-child {
+.fase-card img:first-of-type {
   position: absolute;
 }
 
-.fase-card img:last-child {
+.fase-card img:last-of-type {
   position: absolute;
   bottom: 0;
   right: 0;
 }
 
-.servise-list {
+.star-icon {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.star-icon svg:nth-child(1) {
+  position: absolute;
+  top: 336px;
+  left: 117px;
+  transform: rotate(30deg);
+}
+
+.star-icon svg:nth-child(2) {
+  position: absolute;
+  top: 32px;
+  left: 471px;
+  transform: rotate(-30deg);
+}
+
+.star-icon svg:nth-child(3) {
+  position: absolute;
+  top: 269px;
+  left: 472px;
+  transform: rotate(22.91deg);
+}
+
+.service-list {
   display: flex;
   gap: 24px;
 }
 
-.servise-card {
+.service-card {
   position: relative;
   border-radius: 4px 120px 4px 120px;
   overflow: hidden;
   transition: 0.3s;
 }
 
-.servise-card:hover {
+.service-card:hover {
   transform: scale(1.05);
 }
 
-.servise-photo {
+.service-photo {
   width: 100%;
   height: 460px;
   -o-object-fit: cover;
@@ -204,7 +234,7 @@ ul {
   display: block;
 }
 
-.servise-description {
+.service-description {
   position: absolute;
   bottom: 24px;
   left: 0;
@@ -219,7 +249,7 @@ ul {
   z-index: 1;
 }
 
-.servise-card::after {
+.service-card::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -355,11 +385,11 @@ ul {
   background-size: cover;
 }
 
-.hero-conteiner {
+.hero-container {
   display: flex;
 }
 
-.hero-text-conteiner {
+.hero-text-container {
   margin-left: 100px;
   display: inline-block;
 }
@@ -399,13 +429,13 @@ ul {
   padding: 63px 0 88px 0;
 }
 
-.about-conteiner {
+.about-container {
   display: flex;
   justify-content: space-between;
   gap: 40px;
 }
 
-.about-text-conteiner {
+.about-text-container {
   max-width: 709px;
 }
 
@@ -515,13 +545,13 @@ ul {
   line-height: 100%;
 }
 
-.contact-conteiner {
+.contact-container {
   display: flex;
   gap: 32px;
   justify-content: center;
 }
 
-.form-conteiner {
+.form-container {
   background-color: var(--color-primary-dark);
   border-radius: 32px;
   padding: 48px 56px;
@@ -571,7 +601,7 @@ ul {
   background-size: cover;
 }
 
-.footer-conteiner {
+.footer-container {
   display: flex;
   gap: 20px;
 }
@@ -629,7 +659,7 @@ ul {
   content: "";
 }
 
-.conteiner {
+.container {
   width: 100%;
   max-width: 1288px;
   margin: 0 auto;
