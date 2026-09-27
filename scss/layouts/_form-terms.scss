@@ -1,7 +1,10 @@
-.form-terms-link {
-  margin: 0px;
-  max-width: 260px;
+.form-terms {
+  color: var(--color-secondary-neutral);
+  margin: 0 auto;
   text-align: center;
-  color: var(--color-secondary-light);
-  line-height: 18px;
+
+  &__link {
+    color: var(--color-secondary-light);
+    line-height: 18px;
+  }
 }

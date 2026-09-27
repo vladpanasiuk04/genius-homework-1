@@ -1,25 +1,13 @@
-.about-title span {
+.text-brand {
   color: var(--color-brand);
 }
 
-.why-us-title span {
-  color: var(--color-brand);
-}
-
-.services-title span {
-  color: var(--color-brand);
+.text-bold {
   font-size: 68px;
   line-height: 100%;
 }
 
-.contact-title span {
-  color: var(--color-brand);
-}
-
-.form-section p span {
-  color: var(--color-brand);
-}
-
-.modal-title span {
-  color: var(--color-brand);
+.text-brand-dark {
+  color: var(--color-primary-dark);
+  font-weight: 600;
 }

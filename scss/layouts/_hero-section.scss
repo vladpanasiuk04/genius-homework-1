@@ -12,35 +12,37 @@
   background-repeat: no-repeat;
   background-position: center top;
   background-size: cover;
-}
 
-.hero-container {
-  display: flex;
-}
-.hero-text-container {
-  margin-left: 100px;
-  display: inline-block;
-}
+  &__container {
+    display: flex;
+  }
 
-.hero-description {
-  padding-top: 16px;
-  color: var(--color-primary-dark);
-}
+  &__text {
+    margin-left: 100px;
+    display: inline-block;
+  }
 
-.hero-title {
-  color: var(--color-brand);
-  margin-top: 0;
-  margin-bottom: 40px;
-  font-family: 'Play';
-  font-weight: 700;
-  font-size: 140px;
-  line-height: 114px;
-}
+  &__description {
+    color: var(--color-primary-dark);
+    margin: 0;
+    padding-top: 16px;
+  }
 
-.hero-terms {
-  margin: 0px;
-  max-width: 260px;
-  text-align: center;
-  color: var(--color-secondary-light);
-  line-height: 18px;
+  &__title {
+    color: var(--color-brand);
+    margin-top: 0;
+    margin-bottom: 40px;
+    font-family: 'Play';
+    font-weight: 700;
+    font-size: 140px;
+    line-height: 114px;
+  }
+
+  &__terms {
+    margin: 0px;
+    max-width: 260px;
+    text-align: center;
+    color: var(--color-secondary-light);
+    line-height: 18px;
+  }
 }

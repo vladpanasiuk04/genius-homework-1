@@ -12,12 +12,12 @@
   transition:
     opacity 0.3s,
     visibility 0.3s;
-}
 
-.backdrop.is-hidden {
-  opacity: 0;
-  visibility: hidden;
-  pointer-events: none;
+  &.is-hidden {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+  }
 }
 
 .modal {
@@ -32,64 +32,59 @@
   background-size: cover;
   background-color: var(--color-primary-dark);
   border-radius: 48px;
-  padding: 42px;
+  padding: 42px 144px;
   overflow-y: auto;
-}
 
-.modal-btn-close {
-  position: absolute;
-  top: 42px;
-  right: 42px;
-  background: transparent;
-  padding: 0;
-  border: none;
-  cursor: pointer;
-}
+  &__btn-close {
+    position: absolute;
+    top: 42px;
+    right: 42px;
+    background: transparent;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+  }
 
-.modal-btn-close svg {
-  color: var(--color-primary-light);
-}
+  &__btn-close-icon {
+    color: var(--color-primary-light);
 
-.modal-btn-close:hover svg {
-  color: var(--color-brand);
-}
+    &:hover {
+      color: var(--color-brand);
+    }
+  }
 
-.modal-form {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  width: 435px;
-  margin: 0px auto;
-}
-.modal-title {
-  color: var(--color-primary-light);
-  font-family: 'Play', sans-serif;
-  text-align: center;
-  font-weight: 700;
-  font-size: 64px;
-  line-height: 100%;
-  margin: 0px;
-  margin-bottom: 40px;
-}
+  &__title {
+    color: var(--color-primary-light);
+    font-family: 'Play', sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 64px;
+    line-height: 100%;
+    margin: 0px;
+    margin-bottom: 40px;
+  }
 
-.modal-text {
-  color: var(--color-primary-light);
-  font-family: 'Roboto', sans-serif;
-  text-align: center;
-  font-weight: 600;
-  font-size: 22px;
-  line-height: 100%;
-  margin-bottom: 32px;
-  margin-top: 0;
-}
+  &__text {
+    color: var(--color-primary-light);
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    font-weight: 600;
+    font-size: 22px;
+    line-height: 100%;
+    margin-bottom: 32px;
+    margin-top: 0;
+  }
 
-.modal-text span {
-  color: var(--color-brand);
-}
+  &__form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
 
-.form-field {
-  color: var(--color-primary-light);
-  margin-bottom: 24px;
-  width: 100%;
+  &__form-field {
+    color: var(--color-primary-light);
+    margin-bottom: 24px;
+    width: 100%;
+  }
 }

@@ -6,62 +6,54 @@
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-}
 
-.footer-container {
-  display: flex;
-  gap: 20px;
-}
+  &__container {
+    display: flex;
+    gap: 20px;
+  }
 
-.footer-nav,
-.footer-address {
-  display: flex;
-  flex-basis: 50%;
-  font-style: normal;
-  gap: 20px;
-}
+  &__nav,
+  &__address {
+    display: flex;
+    flex-basis: 50%;
+    font-style: normal;
+    gap: 20px;
+  }
 
-.footer-logo,
-.footer-menu {
-  flex-grow: 1;
-}
+  &__logo,
+  &__menu {
+    flex-grow: 1;
+  }
 
-.footer-address-info,
-.footer-contacts {
-  flex-grow: 1;
-}
+  &__address-info,
+  &__contacts {
+    flex-grow: 1;
+  }
 
-.link-footer {
-  color: var(--color-primary-light);
-  text-decoration: none;
-  font-size: 16px;
-  line-height: 100%;
-  margin-bottom: 16px;
-}
+  &__address-list {
+    display: flex;
+    flex-direction: column;
+  }
 
-.footer-address-list {
-  display: flex;
-  flex-direction: column;
-}
+  &__socials {
+    display: flex;
+    gap: 24px;
+  }
 
-.footer-socials {
-  display: flex;
-  gap: 24px;
-}
+  &__copyright {
+    color: var(--color-secondary-neutral);
+    font-size: 13px;
+    line-height: 100%;
+  }
 
-.footer-copyright {
-  color: var(--color-secondary-neutral);
-  font-size: 13px;
-  line-height: 100%;
-}
-
-.footer-section::after {
-  position: absolute;
-  width: 250px;
-  height: 150px;
-  right: 0;
-  bottom: 0;
-  background-image: url('../image/decor-flacon.png');
-  background-repeat: no-repeat;
-  content: '';
+  &::after {
+    position: absolute;
+    width: 250px;
+    height: 150px;
+    right: 0;
+    bottom: 0;
+    background-image: url('../image/decor-flacon.png');
+    background-repeat: no-repeat;
+    content: '';
+  }
 }

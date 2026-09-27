@@ -1,0 +1,82 @@
+.carousel {
+  display: flex;
+  align-items: center;
+  padding-bottom: 32px;
+  gap: 24px;
+
+  &__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: transparent;
+    border: none;
+    padding: 0;
+    cursor: pointer;
+
+    &:hover {
+      --color0: var(--color-brand);
+      --color1: var(--color-primary-light);
+    }
+
+    &--next {
+      transform: rotate(180deg);
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 24px;
+  }
+
+  &__card {
+    position: relative;
+    border-radius: 4px 120px 4px 120px;
+    overflow: hidden;
+    transition: 0.3s;
+
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  &__photo {
+    width: 100%;
+    height: 460px;
+    object-fit: cover;
+    display: block;
+  }
+
+  &__description {
+    position: absolute;
+    bottom: 24px;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--color-primary-light);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    font-size: 22px;
+    line-height: 26px;
+    letter-spacing: 0;
+    z-index: 1;
+  }
+
+  &__card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(1, 28, 68, 1) 0%,
+      rgba(1, 28, 68, 0.7) 30%,
+      rgba(1, 28, 68, 0) 72.58%
+    );
+  }
+}
